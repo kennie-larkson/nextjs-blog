@@ -24,10 +24,10 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <main
-        className={styles.main}
-        style={{ display: "flex", flexDirection: "row", margin: "3rem 4rem" }}
+        
+        
       >
-        <div>
+        <div  >
           <section className={utilStyles.headingMd}>
             <p>
               Hello, I'm <strong>Kennie</strong>, a software engineer 🤓 and
