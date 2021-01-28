@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
+import styles from "../components/layout.module.css";
 import Date from "../components/date";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
@@ -22,8 +23,10 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <main style={{ display: "flex", flexDirection: "row", margin: "3rem 4rem" }}>
-     
+      <main
+        className={styles.main}
+        style={{ display: "flex", flexDirection: "row", margin: "3rem 4rem" }}
+      >
         <div>
           <section className={utilStyles.headingMd}>
             <p>

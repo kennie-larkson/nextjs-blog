@@ -25,3 +25,17 @@
 .backToHome {
   margin: 3rem 0 0;
 }
+
+@media (max-width: 600px) {
+  .main {
+    margin: 0.5rem 0.5rem;
+  }
+}
+
+/* @media (max-width: 600px) {
+  .container {
+    max-width: 90rem;
+    padding: 0;
+    background-color: blue;
+  }
+} */
