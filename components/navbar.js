@@ -21,6 +21,13 @@ const Navbar = () => {
               Portfolio
             </a>
           </li>
+          <button>
+            <li className="nav-item">
+              <a className="nav-link" href="/signupform">
+                Become a member
+              </a>
+            </li>
+          </button>
         </ul>
       </div>
     </nav>

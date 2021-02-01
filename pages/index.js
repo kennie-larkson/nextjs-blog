@@ -23,11 +23,8 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <main
-        
-        
-      >
-        <div  >
+      <main>
+        <div>
           <section className={utilStyles.headingMd}>
             <p>
               Hello, I'm <strong>Kennie</strong>, a software engineer 🤓 and

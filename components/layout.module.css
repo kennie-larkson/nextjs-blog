@@ -25,28 +25,3 @@
 .backToHome {
   margin: 3rem 0 0;
 }
-
-/* style={{ display: "flex", flexDirection: "row", margin: "3rem 4rem" }} */
-
-/* @media (max-width: 414px) {
-  .main {
-    /* margin: 1rem 1rem; */
-    /* background-color: blueviolet; */
-    /* max-width: 100%; */
-    /* padding: 0;
-    line-height: 2;
-    font-size: 26px; */
-  /* }
-  .container {
-    max-width: 90rem;
-    margin: 1rem auto 1rem
-  }
-/* } */ 
-
-/* @media (max-width: 600px) {
-  .container {
-    max-width: 90rem;
-    padding: 0;
-    background-color: blue;
-  }
-} */
