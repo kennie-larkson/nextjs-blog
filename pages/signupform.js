@@ -55,6 +55,7 @@ const SignupForm = () => {
     <>
       <Layout>
         <form name="memberhip-form" method="POST" onSubmit={handleSubmit} data-netlify = "true">
+        <input type="hidden" name="form-name" value="memberhip-form" />
           <div className="container" style={{ maxWidth: "30rem" }}>
             <div className="form-group">
               <label
