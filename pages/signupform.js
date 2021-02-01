@@ -54,10 +54,15 @@ const SignupForm = () => {
   return (
     <>
       <Layout>
-        <form name="memberhip-form" method="POST" onSubmit={handleSubmit}>
+        <form name="memberhip-form" method="POST" onSubmit={handleSubmit} data-netlify = "true">
           <div className="container" style={{ maxWidth: "30rem" }}>
             <div className="form-group">
-              <label htmlFor="fname">First Name:</label>
+              <label
+                style={{ display: "block", marginBottom: "0.2rem" }}
+                htmlFor="fname"
+              >
+                First Name:
+              </label>
               <input
                 type="text"
                 className="form-control"
@@ -76,7 +81,12 @@ const SignupForm = () => {
               )}
             </div>
             <div className="form-group">
-              <label htmlFor="lname">Last Name:</label>
+              <label
+                htmlFor="lname"
+                style={{ display: "block", marginBottom: "0.2rem" }}
+              >
+                Last Name:
+              </label>
               <input
                 type="text"
                 className="form-control"
@@ -87,13 +97,20 @@ const SignupForm = () => {
                 onChange={handleLname}
               />
               {!lname ? (
-                <div style={{ fontSize: "12px", color: "red" }}>Enter your last name please.</div>
+                <div style={{ fontSize: "12px", color: "red" }}>
+                  Enter your last name please.
+                </div>
               ) : (
                 ""
               )}
             </div>
             <div className="form-group">
-              <label htmlFor="email">Email address:</label>
+              <label
+                htmlFor="email"
+                style={{ display: "block", marginBottom: "0.2rem" }}
+              >
+                Email address:
+              </label>
               <input
                 type="email"
                 className="form-control"
@@ -104,7 +121,9 @@ const SignupForm = () => {
                 onChange={handleEmail}
               />
               {!email ? (
-                <div style={{ fontSize: "12px", color: "red" }}>Enter your email please.</div>
+                <div style={{ fontSize: "12px", color: "red" }}>
+                  Enter your email please.
+                </div>
               ) : (
                 ""
               )}
@@ -114,7 +133,12 @@ const SignupForm = () => {
               </span>
             </div>
             <div className="form-group">
-              <label htmlFor="pwd">Password:</label>
+              <label
+                htmlFor="pwd"
+                style={{ display: "block", marginBottom: "0.2rem" }}
+              >
+                Password:
+              </label>
               <input
                 type="password"
                 className="form-control"
