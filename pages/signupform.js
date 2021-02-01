@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Layout from "../components/layout";
 import styles from "./signupform.module.css";
@@ -8,6 +8,13 @@ const SignupForm = () => {
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
+  const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    if (window.location.search.includes("success=true")) {
+      setSuccess(true);
+    }
+  }, []);
 
   const handleFname = (e) => {
     setFname(e.target.value);
@@ -54,9 +61,19 @@ const SignupForm = () => {
   return (
     <>
       <Layout>
-        <form name="memberhip-form" method="POST" onSubmit={handleSubmit} data-netlify = "true">
-        <input type="hidden" name="form-name" value="memberhip-form" />
-          <div className="container" style={{ maxWidth: "30rem" }}>
+        {success && (
+          <p style={{ color: "green" }}>Successfully submitted form!</p>
+        )}
+        <form
+          name="memberhip-form"
+          method="POST"
+          onSubmit={handleSubmit}
+          action="/?success=true"
+          data-netlify="true"
+        >
+          <input type="hidden" name="form-name" value="memberhip-form" />
+          <div className="container mt-4" style={{ maxWidth: "30rem" }}>
+          <h5>Please fill the form below</h5>
             <div className="form-group">
               <label
                 style={{ display: "block", marginBottom: "0.2rem" }}
