@@ -39,25 +39,25 @@ const SignupForm = () => {
     setPwd(e.target.value);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!fname || !lname || !email || !pwd) {
-      console.log("All fields are required please");
-      return <span>All fields are required please.</span>;
-    }
-    console.log(`
-    First Name: ${fname}
-    Last Name: ${lname}
-    Email: ${email}
-    `);
-    return (
-      <div>
-        First Name: {fname}
-        Last Name: {lname}
-        Email: {email}
-      </div>
-    );
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (!fname || !lname || !email || !pwd) {
+  //     console.log("All fields are required please");
+  //     return <span>All fields are required please.</span>;
+  //   }
+  //   console.log(`
+  //   First Name: ${fname}
+  //   Last Name: ${lname}
+  //   Email: ${email}
+  //   `);
+  //   return (
+  //     <div>
+  //       First Name: {fname}
+  //       Last Name: {lname}
+  //       Email: {email}
+  //     </div>
+  //   );
+  // };
   return (
     <>
       <Layout>
@@ -67,7 +67,7 @@ const SignupForm = () => {
         <form
           name="memberhip-form"
           method="POST"
-          onSubmit={handleSubmit}
+          // onSubmit={handleSubmit}
           action="/?success=true"
           data-netlify="true"
         >
