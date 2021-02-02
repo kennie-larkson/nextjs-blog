@@ -39,25 +39,6 @@ const SignupForm = () => {
     setPwd(e.target.value);
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   if (!fname || !lname || !email || !pwd) {
-  //     console.log("All fields are required please");
-  //     return <span>All fields are required please.</span>;
-  //   }
-  //   console.log(`
-  //   First Name: ${fname}
-  //   Last Name: ${lname}
-  //   Email: ${email}
-  //   `);
-  //   return (
-  //     <div>
-  //       First Name: {fname}
-  //       Last Name: {lname}
-  //       Email: {email}
-  //     </div>
-  //   );
-  // };
   return (
     <>
       <Layout>
@@ -65,15 +46,15 @@ const SignupForm = () => {
           <p style={{ color: "green" }}>Successfully submitted form!</p>
         )}
         <form
-          name="memberhip-form"
+          name="membership-form"
           method="POST"
           // onSubmit={handleSubmit}
-          action="/?success=true"
+          action="/signupform?success=true"
           data-netlify="true"
         >
-          <input type="hidden" name="form-name" value="memberhip-form" />
+          <input type="hidden" name="membership-form" value="membership-form" />
           <div className="container mt-4" style={{ maxWidth: "30rem" }}>
-          <h5>Please fill the form below</h5>
+            <h5>Please fill the form below</h5>
             <div className="form-group">
               <label
                 style={{ display: "block", marginBottom: "0.2rem" }}
