@@ -9,6 +9,7 @@ const SignupForm = () => {
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
   const [success, setSuccess] = useState(false);
+  // const [warning, setWarning] = useState(false);
 
   useEffect(() => {
     if (window.location.search.includes("success=true")) {
@@ -18,12 +19,12 @@ const SignupForm = () => {
 
   const handleFname = (e) => {
     setFname(e.target.value);
-    if (e.target.value === "") {
-      console.log("enter your first name please.");
+    // if (e.target.value === "") {
+    //   console.log("enter your first name please.");
 
-      const warning = <div>Enter your first name please.</div>;
-      return warning;
-    }
+    //   const warning = <div>Enter your first name please.</div>;
+    //   return warning;
+    // }
   };
   console.log(fname);
 
@@ -39,12 +40,19 @@ const SignupForm = () => {
     setPwd(e.target.value);
   };
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (fname === "") {
+  //     setWarning(true);
+  //   }
+  // };
+
   return (
     <>
       <Layout>
-        {success && (
+        {/* {success && (
           <p style={{ color: "green" }}>Successfully submitted form!</p>
-        )}
+        )} */}
         <form
           name="membership-form"
           method="POST"
@@ -52,8 +60,12 @@ const SignupForm = () => {
           action="/signupform?success=true"
           data-netlify="true"
         >
+          {/* {warning && <p style={{ color: "red" }}>Form fields cannot be empty. Your form was not submitted.</p>} */}
           <input type="hidden" name="membership-form" value="membership-form" />
           <div className="container mt-4" style={{ maxWidth: "30rem" }}>
+            {success && (
+              <p style={{ color: "green" }}>Successfully submitted form!</p>
+            )}
             <h5>Please fill the form below</h5>
             <div className="form-group">
               <label
@@ -71,12 +83,18 @@ const SignupForm = () => {
                 style={{ padding: "0.3rem", maxWidth: "50%" }}
                 onChange={handleFname}
               />
-              {!fname ? (
+              {/* {!fname ? (
                 <div style={{ fontSize: "12px", color: "red" }}>
                   Enter your first name please.
                 </div>
               ) : (
                 ""
+              )} */}
+
+              {!fname && (
+                <div style={{ fontSize: "12px", color: "red" }}>
+                  Enter your first name please.
+                </div>
               )}
             </div>
             <div className="form-group">
@@ -95,12 +113,18 @@ const SignupForm = () => {
                 style={{ padding: "0.3rem", maxWidth: "50%" }}
                 onChange={handleLname}
               />
-              {!lname ? (
+              {/* {!lname ? (
                 <div style={{ fontSize: "12px", color: "red" }}>
                   Enter your last name please.
                 </div>
               ) : (
                 ""
+              )} */}
+
+              {!lname && (
+                <div style={{ fontSize: "12px", color: "red" }}>
+                  Enter your last name please.
+                </div>
               )}
             </div>
             <div className="form-group">
@@ -119,12 +143,18 @@ const SignupForm = () => {
                 style={{ padding: "0.3rem", maxWidth: "50%" }}
                 onChange={handleEmail}
               />
-              {!email ? (
+              {/* {!email ? (
                 <div style={{ fontSize: "12px", color: "red" }}>
                   Enter your email please.
                 </div>
               ) : (
                 ""
+              )} */}
+
+              {!email && (
+                <div style={{ fontSize: "12px", color: "red" }}>
+                  Enter your email please.
+                </div>
               )}
               <span style={{ fontSize: "10px", color: "green" }}>
                 We will not disclose your personal information to any third
@@ -147,12 +177,18 @@ const SignupForm = () => {
                 style={{ padding: "0.3rem", maxWidth: "50%" }}
                 onChange={handlePwd}
               />
-              {!pwd ? (
+              {/* {!pwd ? (
                 <div style={{ fontSize: "12px", color: "red" }}>
                   Password cannot be empty please.
                 </div>
               ) : (
                 ""
+              )} */}
+
+              {!pwd && (
+                <div style={{ fontSize: "12px", color: "red" }}>
+                  Password field cannot be empty please.
+                </div>
               )}
             </div>
             <div className="checkbox">
