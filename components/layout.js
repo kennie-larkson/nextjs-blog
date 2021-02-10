@@ -118,6 +118,7 @@ export default function Layout({ children, home }) {
         <h5>
           <p>Made with ❤ using NextJS and Bootstrap </p>
         </h5>
+        ©2021 KCC
       </footer>
     </>
   );
