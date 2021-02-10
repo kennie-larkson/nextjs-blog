@@ -90,6 +90,35 @@ export default function Layout({ children, home }) {
       )}
       {/* </div> */}
       {/* </main> */}
+      <footer
+        style={{
+          display: "flex",
+          backgroundColor: "skyblue",
+          padding: "2rem",
+          color: "whitesmoke",
+          marginTop: "1rem",
+          // justifyContent: "center",
+          flexDirection: "column",
+          textAlign: "center",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ display: "flex" }}>
+          <p style={{ margin: "1rem" }}>
+            <a href="https://twitter.com/kennie_larkson">Twitter</a>
+          </p>{" "}
+          <p style={{ margin: "1rem" }}>
+            {" "}
+            <a href="https://linkedin.com/in/kennie-larkson">LinkedIn</a>
+          </p>
+          <p style={{ margin: "1rem" }}>
+            <a href="https://github.com/kennie-larkson">Github</a>{" "}
+          </p>
+        </div>
+        <h5>
+          <p>Made with ❤ using NextJS and Bootstrap </p>
+        </h5>
+      </footer>
     </>
   );
 }
