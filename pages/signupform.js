@@ -45,19 +45,10 @@ const SignupForm = () => {
     setPwd(e.target.value);
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   if (fname === "") {
-  //     setWarning(true);
-  //   }
-  // };
-
   return (
     <>
       <Layout>
-        {/* {success && (
-          <p style={{ color: "green" }}>Successfully submitted form!</p>
-        )} */}
+        
         <form
           name="membership-form"
           method="POST"
@@ -86,7 +77,7 @@ const SignupForm = () => {
                 name="fname"
                 maxLength="30"
                 style={{ padding: "0.3rem", maxWidth: "50%" }}
-                // onChange={handleUsername}
+                onChange={handleUsername}
                 required
               />
             </div>
@@ -104,7 +95,7 @@ const SignupForm = () => {
                 name="fname"
                 maxLength="30"
                 style={{ padding: "0.3rem", maxWidth: "50%" }}
-                // onChange={handleFname}
+                onChange={handleFname}
                 required
               />
             </div>
@@ -122,7 +113,7 @@ const SignupForm = () => {
                 name="lname"
                 maxLength="30"
                 style={{ padding: "0.3rem", maxWidth: "50%" }}
-                // onChange={handleLname}
+                onChange={handleLname}
                 required
               />
             </div>
@@ -140,7 +131,7 @@ const SignupForm = () => {
                 name="email"
                 maxLength="30"
                 style={{ padding: "0.3rem", maxWidth: "50%" }}
-                // onChange={handleEmail}
+                onChange={handleEmail}
                 required
               />
 
@@ -163,7 +154,7 @@ const SignupForm = () => {
                 name="pwd"
                 maxLength="30"
                 style={{ padding: "0.3rem", maxWidth: "50%" }}
-                // onChange={handlePwd}
+                onChange={handlePwd}
                 required
               />
             </div>
