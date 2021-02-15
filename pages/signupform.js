@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import styles from "./signupform.module.css";
 
 const SignupForm = () => {
+  const [username, setUsername] = useState("");
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
@@ -16,6 +17,10 @@ const SignupForm = () => {
       setSuccess(true);
     }
   }, []);
+
+  const handleUsername = (e) => {
+    setUsername(e.target.value);
+  };
 
   const handleFname = (e) => {
     setFname(e.target.value);
@@ -72,6 +77,24 @@ const SignupForm = () => {
                 style={{ display: "block", marginBottom: "0.2rem" }}
                 htmlFor="fname"
               >
+                Username:
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="fname"
+                name="fname"
+                maxLength="30"
+                style={{ padding: "0.3rem", maxWidth: "50%" }}
+                // onChange={handleUsername}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label
+                style={{ display: "block", marginBottom: "0.2rem" }}
+                htmlFor="fname"
+              >
                 First Name:
               </label>
               <input
@@ -81,21 +104,9 @@ const SignupForm = () => {
                 name="fname"
                 maxLength="30"
                 style={{ padding: "0.3rem", maxWidth: "50%" }}
-                onChange={handleFname}
+                // onChange={handleFname}
+                required
               />
-              {/* {!fname ? (
-                <div style={{ fontSize: "12px", color: "red" }}>
-                  Enter your first name please.
-                </div>
-              ) : (
-                ""
-              )} */}
-
-              {!fname && (
-                <div style={{ fontSize: "12px", color: "red" }}>
-                  Enter your first name please.
-                </div>
-              )}
             </div>
             <div className="form-group">
               <label
@@ -111,21 +122,9 @@ const SignupForm = () => {
                 name="lname"
                 maxLength="30"
                 style={{ padding: "0.3rem", maxWidth: "50%" }}
-                onChange={handleLname}
+                // onChange={handleLname}
+                required
               />
-              {/* {!lname ? (
-                <div style={{ fontSize: "12px", color: "red" }}>
-                  Enter your last name please.
-                </div>
-              ) : (
-                ""
-              )} */}
-
-              {!lname && (
-                <div style={{ fontSize: "12px", color: "red" }}>
-                  Enter your last name please.
-                </div>
-              )}
             </div>
             <div className="form-group">
               <label
@@ -141,21 +140,10 @@ const SignupForm = () => {
                 name="email"
                 maxLength="30"
                 style={{ padding: "0.3rem", maxWidth: "50%" }}
-                onChange={handleEmail}
+                // onChange={handleEmail}
+                required
               />
-              {/* {!email ? (
-                <div style={{ fontSize: "12px", color: "red" }}>
-                  Enter your email please.
-                </div>
-              ) : (
-                ""
-              )} */}
 
-              {!email && (
-                <div style={{ fontSize: "12px", color: "red" }}>
-                  Enter your email please.
-                </div>
-              )}
               <span style={{ fontSize: "10px", color: "green" }}>
                 We will not disclose your personal information to any third
                 parties without your consent
@@ -175,21 +163,9 @@ const SignupForm = () => {
                 name="pwd"
                 maxLength="30"
                 style={{ padding: "0.3rem", maxWidth: "50%" }}
-                onChange={handlePwd}
+                // onChange={handlePwd}
+                required
               />
-              {/* {!pwd ? (
-                <div style={{ fontSize: "12px", color: "red" }}>
-                  Password cannot be empty please.
-                </div>
-              ) : (
-                ""
-              )} */}
-
-              {!pwd && (
-                <div style={{ fontSize: "12px", color: "red" }}>
-                  Password field cannot be empty please.
-                </div>
-              )}
             </div>
             <div className="checkbox">
               <label>
