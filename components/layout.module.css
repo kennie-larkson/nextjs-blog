@@ -25,3 +25,24 @@
 .backToHome {
   margin: 3rem 0 0;
 }
+
+.btnJoin {
+  padding: 0;
+}
+
+@media (max-width: 450px) {
+  .btnJoin {
+    border: none;
+  }
+
+  /* .container {
+    width: 100%;
+  }
+
+  .flexRow {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    text-decoration: none;
+  } */
+}

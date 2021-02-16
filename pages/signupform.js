@@ -8,13 +8,13 @@ const SignupForm = () => {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
-  const [pwd, setPwd] = useState("");
+  // const [pwd, setPwd] = useState("");
   const [success, setSuccess] = useState(false);
-  // const [warning, setWarning] = useState(false);
 
   useEffect(() => {
     if (window.location.search.includes("success=true")) {
       setSuccess(true);
+      setTimeout(() => setSuccess(false), 5000);
     }
   }, []);
 
@@ -24,14 +24,7 @@ const SignupForm = () => {
 
   const handleFname = (e) => {
     setFname(e.target.value);
-    // if (e.target.value === "") {
-    //   console.log("enter your first name please.");
-
-    //   const warning = <div>Enter your first name please.</div>;
-    //   return warning;
-    // }
   };
-  console.log(fname);
 
   const handleLname = (e) => {
     setLname(e.target.value);
@@ -41,22 +34,19 @@ const SignupForm = () => {
     setEmail(e.target.value);
   };
 
-  const handlePwd = (e) => {
-    setPwd(e.target.value);
-  };
+  // const handlePwd = (e) => {
+  //   setPwd(e.target.value);
+  // };
 
   return (
     <>
       <Layout>
-        
         <form
           name="membership-form"
           method="POST"
-          // onSubmit={handleSubmit}
           action="/signupform?success=true"
           data-netlify="true"
         >
-          {/* {warning && <p style={{ color: "red" }}>Form fields cannot be empty. Your form was not submitted.</p>} */}
           <input type="hidden" name="membership-form" value="membership-form" />
           <div className="container mt-4" style={{ maxWidth: "30rem" }}>
             {success && (
@@ -140,7 +130,7 @@ const SignupForm = () => {
                 parties without your consent
               </span>
             </div>
-            <div className="form-group">
+            {/* <div className="form-group">
               <label
                 htmlFor="pwd"
                 style={{ display: "block", marginBottom: "0.2rem" }}
@@ -157,15 +147,17 @@ const SignupForm = () => {
                 onChange={handlePwd}
                 required
               />
-            </div>
+            </div> */}
             <div className="checkbox">
               <label>
                 <input type="checkbox" /> Remember me
               </label>
             </div>
-            <button type="submit" className="btn btn-primary">
-              Submit
-            </button>
+            {username && fname && lname && email && (
+              <button type="submit" className="btn btn-primary">
+                Submit
+              </button>
+            )}
           </div>
         </form>
       </Layout>
@@ -174,3 +166,7 @@ const SignupForm = () => {
 };
 
 export default SignupForm;
+
+// setTimeout(() => {
+//   return <p style={{ color: "green" }}>Successfully submitted form!</p>;
+// }, 5000);
