@@ -46,7 +46,6 @@ export default function Layout({ children, home }) {
           />
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
-          <script src="https://use.fontawesome.com/90538246b5.js"></script>
         </Head>
 
         <header className={styles.header}>
@@ -89,7 +88,8 @@ export default function Layout({ children, home }) {
           </Link>
         </div>
       )}
-      
+      {/* </div> */}
+      {/* </main> */}
       <footer
         style={{
           display: "flex",
