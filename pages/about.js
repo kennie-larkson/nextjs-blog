@@ -17,6 +17,7 @@ const About = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            
           }}
         >
           <div className="row contacts">
@@ -49,7 +50,9 @@ const About = () => {
 
           <article className="container" style={{
             backgroundColor: "antiquewhite",
-            color: "black"
+            color: "black",
+            margin: "2rem",
+            
           }}>
             <p className={styles.intro}>
               <h3>INTRODUCTION</h3>I am{" "}
