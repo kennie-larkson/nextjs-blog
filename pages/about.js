@@ -3,8 +3,7 @@ import Layout from "../components/layout";
 import styles from "./about.module.css";
 
 const About = () => {
-  const email = process.env.REACT_APP_EMAIL;
-  const phone_number = process.env.REACT_APP_PHONE_NUMBER;
+  
 
   return (
     <>
@@ -28,7 +27,7 @@ const About = () => {
                   type="text"
                   aria-label="email"
                   className="form-control"
-                  value={email}
+                  value="materialkenny@gmail.com"
                   disabled
                 />
               </div>
@@ -41,7 +40,7 @@ const About = () => {
                   type="text"
                   aria-label="phone_number"
                   className="form-control"
-                  value={phone_number}
+                  value="+2348179835065"
                   disabled
                 />
               </div>
