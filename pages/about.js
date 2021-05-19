@@ -32,9 +32,7 @@ const About = () => {
                   disabled
                 />
               </div>
-           
-
-            {/* <div className="col"> */}
+          
               <div className="input-group input-group-sm">
                 <span className="input-group-text">Phone</span>
                 <input
@@ -45,7 +43,7 @@ const About = () => {
                   disabled
                 />
               </div>
-            {/* </div> */}
+           
           </div>
 
           <article className="container" style={{
@@ -95,9 +93,6 @@ const About = () => {
                 </li>
               </ul>
             </p>
-
-            
-           
           </article>
         </div>
       </Layout>
