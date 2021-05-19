@@ -1,107 +1,103 @@
 import React from "react";
 import Layout from "../components/layout";
+import styles from "./about.module.css";
 
 const About = () => {
-  const email = process.env.EMAIL;
-  const phone_number = process.env.PHONE_NUMBER;
-  const linkedIn = process.env.LINKEDIN;
-  const github = process.env.GITHUB;
-  const intro = process.env.INTRO;
-  const experience = process.env.EXPERIENCE;
+  const email = process.env.REACT_APP_EMAIL;
+  const phone_number = process.env.REACT_APP_PHONE_NUMBER;
 
   return (
     <>
       <Layout>
-        <section
+        <div
+          className="container"
           style={{
-            backgroundColor: "skyblue",
-            color: "whitesmoke",
-            borderRadius: "0.5em",
-            padding: "1em",
+            backgroundColor: "rgb(135, 206, 235)",
+            color: "rgb(255, 255, 255)",
+            padding: "0.5em",
             display: "flex",
             flexDirection: "column",
+            alignItems: "center",
           }}
         >
-          <div className="contact-detail">
-            <p> Email: {email} </p>
+          <div className="row contacts">
+           
+              <div className="input-group input-group-sm">
+                <span className="input-group-text">Email</span>
+                <input
+                  type="text"
+                  aria-label="email"
+                  className="form-control"
+                  value={email}
+                  disabled
+                />
+              </div>
+           
+
+            {/* <div className="col"> */}
+              <div className="input-group input-group-sm">
+                <span className="input-group-text">Phone</span>
+                <input
+                  type="text"
+                  aria-label="phone_number"
+                  className="form-control"
+                  value={phone_number}
+                  disabled
+                />
+              </div>
+            {/* </div> */}
           </div>
-          <div>
-            <p>Phone: {phone_number} </p>
-          </div>
-          <div>
-            <p>
-              LinkedIn: <a href={linkedIn}>{linkedIn}</a>{" "}
+
+          <article className="container" style={{
+            backgroundColor: "antiquewhite",
+            color: "black"
+          }}>
+            <p className={styles.intro}>
+              <h3>INTRODUCTION</h3>I am{" "}
+              <strong>Lawal, Abdulrafiu Kehinde</strong> a web developer and
+              graduate of Electrical and Computer Engineering. I have skills in
+              both frontend and backend of web technologies but I prefer to
+              associate more with the backend.
             </p>
-          </div>
-          <div>
-            <p>
-              Github: <a href={github}>{github}</a>{" "}
+
+            <p className={styles.experience}>
+              <h3>Experience </h3>
+              In the last 5 years of my voyage in web development I have
+              participated in several communities sponsored tech events most
+              prominently the{" "}
+              <strong>GrowWithGoogleAndAndela (2018 and 2019)</strong> where I
+              learnt so much. I got the opportunity at a real team work during
+              the last <strong>BuildForSDG2020</strong> where I was paired with
+              a couple very smart developers and we obviously collaborated
+              remotely using the git version control and this very experience
+              took my skills to a new height.
+
+              
+              <h4>Stack</h4>
+              <div><strong>JAVASCRIPT | NODEJS | EXPRESSJS | MONGODB | POSTGRES</strong></div>
+            
             </p>
-          </div>
-          <hr
-            style={{
-              padding: "2px",
-              border: "2px solid whitesmoke",
-              borderRadius: "2px",
-              marginTop: "0px",
-              color: "whitesmoke",
-            }}
-          ></hr>
-          <article>
-            <h2>INTRODUCTION</h2>
-            <p style={{ padding: "0.5em" }}>{intro}</p>
-            <h2>EXPERIENCE</h2>
-            <p style={{ padding: "0.5em" }}>{experience}</p>
-            <h2>STACK</h2>
-            <p>
-              <ul style={{ display: "flex", listStyleType: "none" }}>
-                <li style={{ padding: "0.5em" }}>
-                  <a href="https://javascript.org">JavaScript</a>
-                </li>
-                <li style={{ padding: "0.5em" }}>
-                  <a href="https://reactjs.org">ReactJs</a>
-                </li>
-                <li style={{ padding: "0.5em" }}>
-                  <a href="https://nodejs.org">NodeJs</a>
-                </li>
-                <li style={{ padding: "0.5em" }}>
-                  <a href="https://expressjs.org">ExpressJs</a>
-                </li>
-                <li style={{ padding: "0.5em" }}>
-                  <a href="https://nextjs.org">NextJs</a>
-                </li>
-                <li style={{ padding: "0.5em" }}>
-                  <a href="https://mongodb.org">MongoDB</a>
-                </li>
-                <li style={{ padding: "0.5em" }}>
-                  <a href="https://postgressql.org">Postgres</a>
-                </li>
-              </ul>
-            </p>
-            <h2>Projects / Contributions</h2>
-            <p>
+
+            <p className={styles.projects}>
+              <h3>Projects</h3>
               Listed here below are some projects I have contributed to both
               personal side projects and team collaboration.
-              <ul style={{ display: "flex", listStyleType: "none" }}>
-                <li style={{ padding: "0.5em" }}>
-                  <a href="https://github.com/muslimbuilders/halaqaat-server/blob/master/controllers/eventController.js  ">
-                    MuslimBuilders
-                  </a>
+              <ul>
+                <li>
+                  <a href="https://github.com/muslimbuilders/halaqaat-server">MuslimBuilder Project</a>
                 </li>
-                <li style={{ padding: "0.5em" }}>
-                  <a href="https://github.com/kennie-larkson/thesupercoderproject1 ">
-                    TheSuperCoderProject
-                  </a>
-                </li>
-                <li style={{ padding: "0.5em" }}>
-                  <a href="https://github.com/kennie-larkson/apis-Joi-validation/blob/master/index.js ">
-                    Backend Form Field Validation
-                  </a>
+               
+                <li><a href="https://github.com/kennie-larkson/thesupercoderproject1">The SupercoderProject</a></li>
+                <li>
+                  <a href="https://github.com/kennie-larkson/apis-Joi-validation">Backend Field Validation</a>
                 </li>
               </ul>
             </p>
+
+            
+           
           </article>
-        </section>
+        </div>
       </Layout>
     </>
   );

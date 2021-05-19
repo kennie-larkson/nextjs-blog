@@ -1,0 +1,24 @@
+.article {
+  width: 70%;
+  color: black;
+  background-color: antiquewhite;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.intro,
+.experience
+ {
+  padding: 1rem;
+  justify-content: center;
+}
+
+@media (max-width: "450px") {
+  .desktop {
+    display: none;
+  }
+}

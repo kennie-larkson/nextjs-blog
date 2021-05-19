@@ -1,7 +1,5 @@
 .container {
-  /* display: flex; */
   max-width: 56rem;
-  /* flex-direction: column; */
   padding: 0 1rem;
   margin: 3rem auto 6rem;
 }
@@ -35,14 +33,5 @@
     border: none;
   }
 
-  /* .container {
-    width: 100%;
-  }
-
-  .flexRow {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    text-decoration: none;
-  } */
+  
 }
