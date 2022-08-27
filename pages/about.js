@@ -6,7 +6,7 @@ const About = () => {
   return (
     <>
       <Layout>
-        <div
+        {/* <div
           className="container"
           style={{
             backgroundColor: "rgb(135, 206, 235)",
@@ -92,7 +92,7 @@ const About = () => {
               </ul>
             </p>
           </article>
-        </div>
+        </div> */}
       </Layout>
     </>
   );

@@ -34,13 +34,10 @@ const SignupForm = () => {
     setEmail(e.target.value);
   };
 
-  // const handlePwd = (e) => {
-  //   setPwd(e.target.value);
-  // };
 
   return (
     <>
-      <Layout>
+      <Layout form>
         <form
           name="membership-form"
           method="POST"

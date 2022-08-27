@@ -1,6 +1,6 @@
 import styles from "./layout.module.css";
 
-const Navbar = () => {
+const Navbar = ({ form }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light" >
       <div className="container-fluid" >
@@ -23,13 +23,14 @@ const Navbar = () => {
               Portfolio
             </a>
           </li>
-          <button className={styles.btnJoin}>
+          {!form ? (<button className={styles.btnJoin}>
             <li className="nav-item" >
               <a className="nav-link"  href="/signupform">
                 Become a member
               </a>
             </li>
-          </button>
+          </button>) : (<div></div>)}
+          
         </ul>
       </div>
     </nav>

@@ -19,10 +19,10 @@ const siteIntro = (
   </h1>
 );
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, form }) {
   return (
     <>
-      <Navbar />
+      <Navbar form={form}/>
 
       <div className={styles.container}>
         <Head>
@@ -53,7 +53,7 @@ export default function Layout({ children, home }) {
                 className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
                 alt={name}
               />
-              <h1 className={utilStyles.heading2Xl}>{name}</h1>
+              <h1 className={utilStyles.headingXl}>{name}</h1>
             </>
           ) : (
             <>
@@ -66,11 +66,11 @@ export default function Layout({ children, home }) {
                   />
                 </a>
               </Link>
-              <h2 className={utilStyles.headingLg}>
+              {/* <h2 className={utilStyles.headingLg}>
                 <Link href="/">
                   <a className={utilStyles.colorInherit}>{name}</a>
                 </Link>
-              </h2>
+              </h2> */}
             </>
           )}
         </header>
@@ -109,6 +109,9 @@ export default function Layout({ children, home }) {
           </p>
           <p style={{ margin: "1rem" }}>
             <a href="https://github.com/kennie-larkson">Github</a>{" "}
+          </p>
+          <p style={{ margin: "1rem" }}>
+            <a href="https://kehindelawal-articles.hashnode.dev/">Hashnode Articles</a>{" "}
           </p>
         </div>
         <h5>
