@@ -3,7 +3,7 @@ import React from "react";
 function Header({ home, name }) {
   return (
     <header
-      className={`flex flex-col mx-20 self-center text-white mt-10 justify-center bg-black`}
+      className={`phone:container flex flex-col mx-20 self-center text-white mt-10 justify-center bg-black`}
     >
       {home ? (
         <>

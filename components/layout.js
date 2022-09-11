@@ -22,7 +22,7 @@ export function SiteIntro() {
 
 export default function Layout({ children, home, form, projects, about }) {
   return (
-    <>
+    <div className=" ">
       <Navbar
         form={form}
         home={home}
@@ -90,6 +90,6 @@ export default function Layout({ children, home, form, projects, about }) {
         </div>
       )}
       <Footer />
-    </>
+    </div>
   );
 }

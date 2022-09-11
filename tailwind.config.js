@@ -7,6 +7,8 @@ module.exports = {
   theme: {
     extend: {
       screens: {
+        phone: "300px",
+        // => @media (min-width: 300px) { ... }
         tablet: "640px",
         // => @media (min-width: 640px) { ... }
 
@@ -20,6 +22,9 @@ module.exports = {
         "header-image":
           "url('../public/images/pexels-eva-bronzini-7599547.jpg')",
         "footer-texture": "url('/img/footer-texture.png')",
+      },
+      container: {
+        center: true,
       },
     },
   },

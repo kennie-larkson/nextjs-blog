@@ -1,6 +1,6 @@
 const Navbar = ({ form, home, projects, about, title }) => {
   return (
-    <nav className="navbar mt-5 mx-20 rounded-t-lg navbar-light bg-sky-600">
+    <nav className="phone:container navbar mt-5 mx-20 rounded-t-lg navbar-light bg-sky-600">
       {/* <div className="container mx-5 px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16"> */}
       <div className=" flex items-center gap-96 justify-center sm:items-stretch sm:justify-start h-16">
