@@ -7,7 +7,7 @@ import Header from "./header";
 import Sidebar from "./sidebar";
 
 const name = "Abdulrafiu Kehinde Lawal";
-const siteTitle = "KennieCodeCamp";
+export const siteTitle = "KennieCodeCamp";
 
 export function SiteIntro() {
   return (
