@@ -2,16 +2,16 @@ import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import Body from "../components/body";
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-}
+// export async function getStaticProps() {
+//   const allPostsData = getSortedPostsData();
+//   return {
+//     props: {
+//       allPostsData,
+//     },
+//   };
+// }
 
-export default function Home({ allPostsData }) {
+export default function Home({}) {
   return (
     <Layout home>
       <Head>
