@@ -1,12 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
-
-import styles from "../components/layout.module.css";
-import Date from "../components/date";
 import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
+import Body from "../components/body";
 import { getSortedPostsData } from "../lib/posts";
-// import Sidebar from "../components/sidebar";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -23,45 +19,33 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <main>
-        <div>
-          <section className={utilStyles.headingMd}>
-            <p>
+      {/* <main> */}
+      <Body>
+        <section className="flex leading-normal font-mono hover:leading-loose">
+          <div className="">
+            <p className=" ">
               Hello, I'm <strong>Kennie</strong>, a software engineer 🤓 and
               this is my profile page. You can hang around to learn more about
               me.
               <br />
               You can also contact me on{" "}
-              <a href="https://twitter.com/kennie_larkson">Twitter</a>{" "}
+              <a
+                className="underline"
+                href="https://twitter.com/kennie_larkson"
+              >
+                Twitter
+              </a>{" "}
             </p>
-            <p>
+            <p className=" ">
               This is my portfolio website - here I will make a showroom of my
-              skills and services, I will write articles on the skills and
+              skills and services. I will write articles on the skills and
               technologies I work with so you may learn something while you hang
               out with me. Cool? 😎
             </p>
-          </section>
-          <section
-            className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}
-          >
-            <h2 className={utilStyles.headingLg}>Blog</h2>
-            <ul className={utilStyles.list}>
-              {allPostsData.map(({ id, date, title }) => (
-                <li className={utilStyles.listItem} key={id}>
-                  <Link href={`/posts/${id}`}>
-                    <a>{title}</a>
-                  </Link>
-                  <br />
-                  <small className={utilStyles.lightText}>
-                    <Date dateString={date} />
-                  </small>
-                  <hr />
-                </li>
-              ))}
-            </ul>
-          </section>
-        </div>
-      </main>
+          </div>
+        </section>
+      </Body>
+      {/* </main> */}
     </Layout>
   );
 }
