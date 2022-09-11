@@ -8,7 +8,7 @@
 
 .headingXl {
   font-size: 1.5rem;
-  line-height: 1.0;
+  line-height: 1;
   font-weight: 500;
   letter-spacing: -0.05rem;
   margin: 1rem 0;
@@ -49,4 +49,10 @@
 
 .lightText {
   color: #999;
+}
+
+.bgImage {
+  background-image: url("/public/images/pexels-markus-spiske.edit.jpg");
+  width: fit-content;
+  height: fit-content;
 }

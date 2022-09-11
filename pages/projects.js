@@ -1,13 +1,20 @@
 import Layout from "../components/layout";
+import Body from "../components/body";
 
 const Projects = () => {
-  return (
-    <>
-      <Layout>
-        <h1>Projects Page</h1>
-      </Layout>
-    </>
-  );
+ 
+return (
+  <Layout projects>
+    <Body>
+    Projects Page
+    </Body>
+  
+</Layout>
+)
+
+      
+      
+  
 };
 
 export default Projects;

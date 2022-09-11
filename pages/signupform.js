@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import Layout from "../components/layout";
-import styles from "./signupform.module.css";
+import Body from "../components/body";
 
 const SignupForm = () => {
   const [username, setUsername] = useState("");
@@ -34,10 +34,10 @@ const SignupForm = () => {
     setEmail(e.target.value);
   };
 
-
   return (
     <>
       <Layout form>
+        <Body>
         <form
           name="membership-form"
           method="POST"
@@ -45,118 +45,76 @@ const SignupForm = () => {
           data-netlify="true"
         >
           <input type="hidden" name="membership-form" value="membership-form" />
-          <div className="container mt-4" style={{ maxWidth: "30rem" }}>
-            {success && (
-              <p style={{ color: "green" }}>Successfully submitted form!</p>
-            )}
+          <div className="">
+            {success && <p>Successfully submitted form!</p>}
             <h5>Please fill the form below</h5>
-            <div className="form-group">
-              <label
-                style={{ display: "block", marginBottom: "0.2rem" }}
-                htmlFor="fname"
-              >
-                Username:
-              </label>
+            <div className="">
+              <label htmlFor="fname">Username:</label>
               <input
                 type="text"
-                className="form-control"
+                className=""
                 id="fname"
                 name="fname"
                 maxLength="30"
-                style={{ padding: "0.3rem", maxWidth: "50%" }}
                 onChange={handleUsername}
                 required
               />
             </div>
             <div className="form-group">
-              <label
-                style={{ display: "block", marginBottom: "0.2rem" }}
-                htmlFor="fname"
-              >
-                First Name:
-              </label>
+              <label htmlFor="fname">First Name:</label>
               <input
                 type="text"
-                className="form-control"
+                className=""
                 id="fname"
                 name="fname"
                 maxLength="30"
-                style={{ padding: "0.3rem", maxWidth: "50%" }}
                 onChange={handleFname}
                 required
               />
             </div>
-            <div className="form-group">
-              <label
-                htmlFor="lname"
-                style={{ display: "block", marginBottom: "0.2rem" }}
-              >
-                Last Name:
-              </label>
+            <div className="">
+              <label htmlFor="lname">Last Name:</label>
               <input
                 type="text"
-                className="form-control"
+                className=""
                 id="lname"
                 name="lname"
                 maxLength="30"
-                style={{ padding: "0.3rem", maxWidth: "50%" }}
                 onChange={handleLname}
                 required
               />
             </div>
-            <div className="form-group">
-              <label
-                htmlFor="email"
-                style={{ display: "block", marginBottom: "0.2rem" }}
-              >
-                Email address:
-              </label>
+            <div className="">
+              <label htmlFor="email">Email address:</label>
               <input
                 type="email"
-                className="form-control"
+                className=""
                 id="email"
                 name="email"
                 maxLength="30"
-                style={{ padding: "0.3rem", maxWidth: "50%" }}
                 onChange={handleEmail}
                 required
               />
 
-              <span style={{ fontSize: "10px", color: "green" }}>
+              <span>
                 We will not disclose your personal information to any third
                 parties without your consent
               </span>
             </div>
-            {/* <div className="form-group">
-              <label
-                htmlFor="pwd"
-                style={{ display: "block", marginBottom: "0.2rem" }}
-              >
-                Password:
-              </label>
-              <input
-                type="password"
-                className="form-control"
-                id="pwd"
-                name="pwd"
-                maxLength="30"
-                style={{ padding: "0.3rem", maxWidth: "50%" }}
-                onChange={handlePwd}
-                required
-              />
-            </div> */}
-            <div className="checkbox">
+
+            <div className="">
               <label>
-                <input type="checkbox" /> Remember me
+                <input type="" /> Remember me
               </label>
             </div>
             {username && fname && lname && email && (
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="">
                 Submit
               </button>
             )}
           </div>
         </form>
+        </Body>
       </Layout>
     </>
   );
