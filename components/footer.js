@@ -9,7 +9,8 @@ import {
 
 export default function Footer() {
   return (
-    <div className="grid grid-cols-1 text-center px-5 py-5 mx-20 my-2 rounded-b-lg border-gray-400 bg-sky-500">
+    //<div className="phone:container">
+    <div className="phone:container grid grid-cols-1 text-center px-5 py-5 mx-20 my-2 rounded-b-lg border-gray-400 bg-sky-500">
       <div className="flex justify-center space-x-10 py-5 border-b-2 my-5 text-opacity-70   ">
         {/* <button className="border rounded-md bg-sky-600 px-5 text-white">
           KCC
@@ -55,6 +56,7 @@ export default function Footer() {
         </span>
       </div>
     </div>
+    //</div>
   );
 }
 

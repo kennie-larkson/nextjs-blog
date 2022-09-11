@@ -2,7 +2,9 @@ import React from "react";
 
 function Body({ children }) {
   return (
-    <div className="flex border border-t-0 p-10 mx-20 my-10 ">{children}</div>
+    <div className="phone:container flex border border-t-0 p-10 mx-20 my-10 ">
+      {children}
+    </div>
   );
 }
 
