@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import Body from "../components/body";
+import SignupForm from "./signupform";
 
 export default function Home({}) {
   return (
@@ -10,7 +11,7 @@ export default function Home({}) {
       </Head>
       {/* <main> */}
       <Body>
-        <section className="flex flex-col phone:container leading-normal font-mono hover:leading-loose">
+        <section className="flex flex-col phone:container bg-gray-50 text-justify py-2 px-3 rounded-sm font-mono leading-loose">
           <div className="">
             <p className=" ">
               Hello, I'm <strong>Kennie</strong>, a software engineer 🤓 and
@@ -32,8 +33,8 @@ export default function Home({}) {
               out with me. Cool? 😎
             </p>
           </div>
-          <div id="signup-form">Signup Form</div>
         </section>
+        <SignupForm />
       </Body>
       {/* </main> */}
     </Layout>

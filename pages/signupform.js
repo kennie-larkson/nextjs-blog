@@ -34,98 +34,41 @@ const SignupForm = () => {
     setEmail(e.target.value);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Email", email);
+  };
+
   return (
     <>
-      <Layout form>
-        <Body>
-          <form
+      <form
+        name="membership-form"
+        method="POST"
+        action="/signupform?success=true"
+        data-netlify="true"
+        onSubmit={handleSubmit}
+      >
+        <div className="container text-center p-10 mt-20 bg-gray-100">
+          <input
+            type="text"
+            value={email}
+            onChange={handleEmail}
             name="membership-form"
-            method="POST"
-            action="/signupform?success=true"
-            data-netlify="true"
+            placeholder="Enter a valid email!"
+            class="form-input px-4 py-3 my-5 rounded-full md:w-96 md:mr-5 hover:shadow-md"
+          ></input>
+          <button
+            type="submit"
+            className=" rounded-full px-4 focus:outline-yellow-800 bg-yellow-400 hover:bg-yellow-300 hover:shadow-md text-yellow-800 hover:text-yellow-800 transition duration-300 py-2 justify-center"
           >
-            <input
-              type="hidden"
-              name="membership-form"
-              value="membership-form"
-            />
-            <div className="">
-              {success && <p>Successfully submitted form!</p>}
-              <h5>Please fill the form below</h5>
-              <div className="">
-                <label htmlFor="fname">Username:</label>
-                <input
-                  type="text"
-                  className=""
-                  id="fname"
-                  name="fname"
-                  maxLength="30"
-                  onChange={handleUsername}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="fname">First Name:</label>
-                <input
-                  type="text"
-                  className=""
-                  id="fname"
-                  name="fname"
-                  maxLength="30"
-                  onChange={handleFname}
-                  required
-                />
-              </div>
-              <div className="">
-                <label htmlFor="lname">Last Name:</label>
-                <input
-                  type="text"
-                  className=""
-                  id="lname"
-                  name="lname"
-                  maxLength="30"
-                  onChange={handleLname}
-                  required
-                />
-              </div>
-              <div className="">
-                <label htmlFor="email">Email address:</label>
-                <input
-                  type="email"
-                  className=""
-                  id="email"
-                  name="email"
-                  maxLength="30"
-                  onChange={handleEmail}
-                  required
-                />
-
-                <span>
-                  We will not disclose your personal information to any third
-                  parties without your consent
-                </span>
-              </div>
-
-              <div className="">
-                <label>
-                  <input type="" /> Remember me
-                </label>
-              </div>
-              {username && fname && lname && email && (
-                <button type="submit" className="">
-                  Submit
-                </button>
-              )}
-            </div>
-          </form>
-        </Body>
-      </Layout>
+            Subscribe
+          </button>
+        </div>
+      </form>
     </>
   );
 };
 
 export default SignupForm;
 
-// setTimeout(() => {
-//   return <p style={{ color: "green" }}>Successfully submitted form!</p>;
-// }, 5000);
+//items-center justify-center my-20 p-10
