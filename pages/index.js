@@ -10,7 +10,7 @@ export default function Home({}) {
       </Head>
       {/* <main> */}
       <Body>
-        <section className="flex phone:container leading-normal font-mono hover:leading-loose">
+        <section className="flex flex-col phone:container leading-normal font-mono hover:leading-loose">
           <div className="">
             <p className=" ">
               Hello, I'm <strong>Kennie</strong>, a software engineer 🤓 and
@@ -32,6 +32,7 @@ export default function Home({}) {
               out with me. Cool? 😎
             </p>
           </div>
+          <div id="signup-form">Signup Form</div>
         </section>
       </Body>
       {/* </main> */}

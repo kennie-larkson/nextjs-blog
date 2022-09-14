@@ -19,10 +19,10 @@ const Navbar = ({ form, home, projects, about, title }) => {
               {/* logo  */}
               <div>
                 <a
-                  href="#"
+                  href="/"
                   className="flex items-center py-4 px-2 text-gray-700"
                 >
-                  <svg
+                  {/* <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
@@ -34,13 +34,13 @@ const Navbar = ({ form, home, projects, about, title }) => {
                       clip-rule="evenodd"
                     />
                     <path d="M7.151 21.75a2.999 2.999 0 002.599 1.5h7.5a3 3 0 003-3v-7.5c0-1.11-.603-2.08-1.5-2.599v7.099a4.5 4.5 0 01-4.5 4.5H7.151z" />
-                  </svg>
+                  </svg> */}
 
                   <span className="font-bold">{title}</span>
                 </a>
               </div>
               {/* primary nav */}
-              <div className="hidden md:flex flex items-center space-x-1 text-white">
+              <div className="hidden md:flex items-center space-x-1 text-white">
                 <a href="/" className="py-4 px-3 hover:text-gray-900">
                   Home
                 </a>
@@ -56,12 +56,12 @@ const Navbar = ({ form, home, projects, about, title }) => {
               </div>
             </div>
             {/* secondary nav  */}
-            <div className="hidden md:flex flex items-center space-x-1">
+            <div className="hidden md:flex items-center space-x-1">
               <a href="#" className="py-5 px-3">
                 Login
               </a>
               <a
-                href="#"
+                href="#signupform"
                 className="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-800 hover:text-yellow-800 rounded transition duration-300"
               >
                 Signup
@@ -106,7 +106,7 @@ const Navbar = ({ form, home, projects, about, title }) => {
               Login
             </a>
             <a
-              href="#"
+              href="#signup-form"
               className="py-1 px-1 bg-yellow-400 hover:bg-yellow-300 text-yellow-800 hover:text-yellow-800 rounded transition duration-300"
             >
               Signup
