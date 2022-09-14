@@ -2,15 +2,6 @@ import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import Body from "../components/body";
 
-// export async function getStaticProps() {
-//   const allPostsData = getSortedPostsData();
-//   return {
-//     props: {
-//       allPostsData,
-//     },
-//   };
-// }
-
 export default function Home({}) {
   return (
     <Layout home>
@@ -19,7 +10,7 @@ export default function Home({}) {
       </Head>
       {/* <main> */}
       <Body>
-        <section className="flex leading-normal font-mono hover:leading-loose">
+        <section className="flex flex-col phone:container leading-normal font-mono hover:leading-loose">
           <div className="">
             <p className=" ">
               Hello, I'm <strong>Kennie</strong>, a software engineer 🤓 and
@@ -41,6 +32,7 @@ export default function Home({}) {
               out with me. Cool? 😎
             </p>
           </div>
+          <div id="signup-form">Signup Form</div>
         </section>
       </Body>
       {/* </main> */}
