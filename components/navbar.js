@@ -36,7 +36,7 @@ const Navbar = ({ form, home, projects, about, title }) => {
                     <path d="M7.151 21.75a2.999 2.999 0 002.599 1.5h7.5a3 3 0 003-3v-7.5c0-1.11-.603-2.08-1.5-2.599v7.099a4.5 4.5 0 01-4.5 4.5H7.151z" />
                   </svg> */}
 
-                  <span className="font-bold">{title}</span>
+                  <span className="font-extrabold">{title}</span>
                 </a>
               </div>
               {/* primary nav */}
@@ -61,7 +61,7 @@ const Navbar = ({ form, home, projects, about, title }) => {
                 Login
               </a>
               <a
-                href="#signupform"
+                href="/signupform"
                 className="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-800 hover:text-yellow-800 rounded transition duration-300"
               >
                 Signup
