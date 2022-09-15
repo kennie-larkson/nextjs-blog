@@ -24,7 +24,7 @@ export default function Layout({
   children,
   home,
   // signupform,
-  signup,
+  form,
   projects,
   about,
 }) {
@@ -32,7 +32,7 @@ export default function Layout({
     <>
       <Navbar
         // form={signupform}
-        form={signup}
+        form={form}
         home={home}
         projects={projects}
         about={about}
