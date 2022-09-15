@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import Body from "../components/body";
-import SignupForm from "./signupform";
+import SignupForm from "./../components/signupform";
 
 export default function Home({}) {
   return (

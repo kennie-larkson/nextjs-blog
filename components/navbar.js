@@ -33,26 +33,30 @@ const Navbar = ({ form, home, projects, about, title }) => {
                 <a href="/projects" className="py-4 px-3  hover:text-gray-900">
                   Projects
                 </a>
-                <a
-                  href="/blog"
-                  className="block py-2 px-4 text-sm hover:bg-gray-200"
-                >
+                <a href="/blog" className="py-4 px-3 hover:text-gray-900">
                   Blog
                 </a>
               </div>
             </div>
             {/* secondary nav  */}
+
             <div className="hidden md:flex items-center space-x-1">
-              <a href="#" className="py-5 px-3">
+              <a
+                href="#"
+                className="py-2 px-3 bg-green-400 hover:bg-green-300 text-green-800 hover:text-green-800 rounded transition duration-300"
+              >
                 Login
               </a>
-              <a
-                href="/signupform"
-                className="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-800 hover:text-yellow-800 rounded transition duration-300"
-              >
-                Signup
-              </a>
+              {!form && (
+                <a
+                  href="/signup"
+                  className="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-800 hover:text-yellow-800 rounded transition duration-300"
+                >
+                  Signup
+                </a>
+              )}
             </div>
+
             {/* mobile button goes here */}
             <div className="md:hidden flex items-center">
               <button className="mobile-menu-button">
@@ -88,11 +92,15 @@ const Navbar = ({ form, home, projects, about, title }) => {
             Blog
           </a>
           <div className=" flex items-center space-x-1">
-            <a href="#" className="py-5 px-3">
+            <a
+              href="#"
+              className="py-2 px-3 bg-green-400 hover:bg-green-300 text-green-800 hover:text-green-800 rounded transition duration-300"
+            >
               Login
             </a>
+
             <a
-              href="#signup-form"
+              href="/signup"
               className="py-1 px-1 bg-yellow-400 hover:bg-yellow-300 text-yellow-800 hover:text-yellow-800 rounded transition duration-300"
             >
               Signup
