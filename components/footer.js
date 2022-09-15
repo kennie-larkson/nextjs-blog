@@ -20,7 +20,7 @@ export default function Footer() {
           className=" px-3 py-2 "
         >
           <button>
-            <AiOutlineTwitter color="white" size="2.5rem" />
+            <AiOutlineTwitter color="white" size="1.5rem" />
           </button>
         </Link>
 
@@ -30,7 +30,7 @@ export default function Footer() {
           className="   px-3 py-2 "
         >
           <button>
-            <AiOutlineLinkedin color="black" size="2.5rem" />
+            <AiOutlineLinkedin color="black" size="1.5rem" />
           </button>
         </Link>
 
@@ -40,27 +40,27 @@ export default function Footer() {
           className="   px-3 py-2 "
         >
           <button>
-            <AiOutlineGithub color="black" size="2.5rem" />
+            <AiOutlineGithub color="black" size="1.5rem" />
           </button>
         </Link>
       </div>
 
       <div className="flex justify-center space-x-10 my-5 text-opacity-70 py-5 border-gray-300 border-b-2 ">
-        <FaHeart color="red" size="2.5rem" />
+        <FaHeart color="red" size="1.5rem" />
         <Link href="https://nextjs.org">
           <button>
-            <TbBrandNextjs color="black" size="2.5rem" />
+            <TbBrandNextjs color="black" size="1.5rem" />
           </button>
         </Link>{" "}
         <Link href="https://tailwindcss.com">
           <button>
-            <SiTailwindcss color="purple" size="2.5rem" />
+            <SiTailwindcss color="purple" size="1.5rem" />
           </button>
         </Link>{" "}
       </div>
 
       <div className="flex justify-center space-x-10 my-5 text-opacity-70 ">
-        <AiOutlineCopyright color="purple" size="2.5rem" />{" "}
+        <AiOutlineCopyright color="purple" size="1.5rem" />{" "}
         <span className=" ">
           2022 KennieCodeCamp, Inc. All rights reserved.
         </span>

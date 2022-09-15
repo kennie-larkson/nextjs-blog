@@ -4,10 +4,10 @@ import Layout from "../components/layout";
 import Body from "../components/body";
 import SignupForm from "../components/signupform";
 
-const Signup = () => {
+const Signup = ({}) => {
   return (
     <>
-      <Layout signupform>
+      <Layout form>
         <SignupForm />
       </Layout>
     </>

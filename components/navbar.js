@@ -47,7 +47,9 @@ const Navbar = ({ form, home, projects, about, title }) => {
               >
                 Login
               </a>
-              {!form && (
+              {form ? (
+                <div></div>
+              ) : (
                 <a
                   href="/signup"
                   className="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-800 hover:text-yellow-800 rounded transition duration-300"
@@ -99,12 +101,16 @@ const Navbar = ({ form, home, projects, about, title }) => {
               Login
             </a>
 
-            <a
-              href="/signup"
-              className="py-1 px-1 bg-yellow-400 hover:bg-yellow-300 text-yellow-800 hover:text-yellow-800 rounded transition duration-300"
-            >
-              Signup
-            </a>
+            {form ? (
+              <div></div>
+            ) : (
+              <a
+                href="/signup"
+                className="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-800 hover:text-yellow-800 rounded transition duration-300"
+              >
+                Signup
+              </a>
+            )}
           </div>
         </div>
       </nav>
