@@ -6,58 +6,65 @@ import {
   AiOutlineLinkedin,
   AiOutlineCopyright,
 } from "react-icons/ai";
+import { SiTailwindcss } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+import { FaHeart } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    //<div className="phone:container">
-    <div className="phone:container grid grid-cols-1 text-center px-5 py-5 mx-20 my-2 rounded-b-lg border-gray-400 bg-sky-500">
-      <div className="flex justify-center space-x-10 py-5 border-b-2 my-5 text-opacity-70   ">
-        {/* <button className="border rounded-md bg-sky-600 px-5 text-white">
-          KCC
-        </button> */}
-        <span className="">Impacting the world a line of code at a time</span>
+    <div className="phone:container grid grid-cols-1 text-center px-2 py-2 mx-20 rounded-b-lg border-gray-400 bg-sky-500">
+      <div className="flex justify-center space-x-5 py-3 border-gray-300 border-b-2 my-5  text-opacity-70  ">
         <Link
           href="https://twitter.com/kennie_larkson"
           passHref
-          className=" px-3 py-2 rounded-md font-medium"
+          className=" px-3 py-2 "
         >
-          <AiOutlineTwitter size="1.5rem" />
+          <button>
+            <AiOutlineTwitter color="white" size="2.5rem" />
+          </button>
         </Link>
 
         <Link
           href="https://linkedin.com/in/kennie-larkson"
           passHref
-          className="   px-3 py-2 rounded-md text-sm font-medium"
+          className="   px-3 py-2 "
         >
-          <AiOutlineLinkedin size="1.5rem" />
+          <button>
+            <AiOutlineLinkedin color="black" size="2.5rem" />
+          </button>
         </Link>
 
         <Link
           href="https://github.com/kennie-larkson"
           passHref
-          className="   px-3 py-2 rounded-md text-sm font-medium"
+          className="   px-3 py-2 "
         >
-          <AiOutlineGithub size="1.5rem" />
+          <button>
+            <AiOutlineGithub color="black" size="2.5rem" />
+          </button>
         </Link>
       </div>
-      {/* <hr /> */}
-      <div className="flex justify-center space-x-10 my-5 text-opacity-70 py-5 border-b-2 ">
-        <span className=" ">
-          <Link href="https://nextjs.org">This site was made with NextJs</Link>{" "}
-          and <Link href="https://tailwindcss.com">Tailwind CSS</Link>{" "}
-        </span>
+
+      <div className="flex justify-center space-x-10 my-5 text-opacity-70 py-5 border-gray-300 border-b-2 ">
+        <FaHeart color="red" size="2.5rem" />
+        <Link href="https://nextjs.org">
+          <button>
+            <TbBrandNextjs color="black" size="2.5rem" />
+          </button>
+        </Link>{" "}
+        <Link href="https://tailwindcss.com">
+          <button>
+            <SiTailwindcss color="purple" size="2.5rem" />
+          </button>
+        </Link>{" "}
       </div>
 
-      {/* <hr /> */}
       <div className="flex justify-center space-x-10 my-5 text-opacity-70 ">
-        <AiOutlineCopyright />{" "}
+        <AiOutlineCopyright color="purple" size="2.5rem" />{" "}
         <span className=" ">
           2022 KennieCodeCamp, Inc. All rights reserved.
         </span>
       </div>
     </div>
-    //</div>
   );
 }
-
-//text-gray-600

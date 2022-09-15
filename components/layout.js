@@ -20,11 +20,19 @@ export function SiteIntro() {
   );
 }
 
-export default function Layout({ children, home, form, projects, about }) {
+export default function Layout({
+  children,
+  home,
+  // signupform,
+  signup,
+  projects,
+  about,
+}) {
   return (
     <>
       <Navbar
-        form={form}
+        // form={signupform}
+        form={signup}
         home={home}
         projects={projects}
         about={about}
@@ -89,13 +97,13 @@ export default function Layout({ children, home, form, projects, about }) {
 
       <main>{children}</main>
 
-      {!home && (
+      {/* {!home && (
         <div>
           <Link href="/">
             <a>← Back to home</a>
           </Link>
         </div>
-      )}
+      )} */}
       <Footer />
     </>
   );
