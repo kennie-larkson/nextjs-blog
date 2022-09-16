@@ -4,7 +4,6 @@ import Link from "next/link";
 import Navbar from "./navbar";
 import Footer from "./footer";
 import Header from "./header";
-import Sidebar from "./sidebar";
 
 const name = "Abdulrafiu Kehinde Lawal";
 export const siteTitle = "KennieCodeCamp";
@@ -23,20 +22,20 @@ export function SiteIntro() {
 export default function Layout({
   children,
   home,
-  // signupform,
   form,
   projects,
   about,
+  resume,
 }) {
   return (
     <>
       <Navbar
-        // form={signupform}
         form={form}
         home={home}
         projects={projects}
         about={about}
         title={siteTitle}
+        resume={resume}
       />
 
       <Head>
@@ -86,24 +85,13 @@ export default function Layout({
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap"
-          rel="stylesheet"
-        ></link>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
       </Head>
 
       <Header home={home} name={name} />
 
       <main>{children}</main>
 
-      {/* {!home && (
-        <div>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )} */}
       <Footer />
     </>
   );
