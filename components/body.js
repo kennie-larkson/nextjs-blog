@@ -9,5 +9,3 @@ function Body({ children }) {
 }
 
 export default Body;
-
-//bg-slate-200  my-10

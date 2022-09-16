@@ -23,9 +23,9 @@ module.exports = {
         center: true,
       },
     },
-    fontFamily: {
-      "title-font": ["Merriweather", "serif"],
-    },
+    // fontFamily: {
+    //   "title-font": ["Merriweather", "serif"],
+    // },
   },
   plugins: [require("@tailwindcss/forms")],
 };

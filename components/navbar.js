@@ -36,6 +36,9 @@ const Navbar = ({ form, home, projects, about, title }) => {
                 <a href="/blog" className="py-4 px-3 hover:text-gray-900">
                   Blog
                 </a>
+                <a href="/resume" className="py-4 px-3 hover:text-gray-900">
+                  Resume
+                </a>
               </div>
             </div>
             {/* secondary nav  */}
@@ -69,9 +72,9 @@ const Navbar = ({ form, home, projects, about, title }) => {
                   className="w-6 h-6 text-white"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M3 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 5.25zm0 4.5A.75.75 0 013.75 9h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 9.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   />
                 </svg>
               </button>
@@ -93,6 +96,12 @@ const Navbar = ({ form, home, projects, about, title }) => {
           <a href="/blog" className="block py-2 px-4 text-sm hover:bg-gray-200">
             Blog
           </a>
+          {/* <a
+            href="/resume"
+            className="block py-2 px-4 text-sm hover:bg-gray-200"
+          >
+            Resume
+          </a> */}
           <div className=" flex items-center space-x-1">
             <a
               href="#"
