@@ -96,12 +96,12 @@ const Navbar = ({ form, home, projects, about, title }) => {
           <a href="/blog" className="block py-2 px-4 text-sm hover:bg-gray-200">
             Blog
           </a>
-          {/* <a
+          <a
             href="/resume"
             className="block py-2 px-4 text-sm hover:bg-gray-200"
           >
             Resume
-          </a> */}
+          </a>
           <div className=" flex items-center space-x-1">
             <a
               href="#"
