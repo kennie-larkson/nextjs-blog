@@ -9,10 +9,11 @@ import {
 import { SiTailwindcss } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaHeart } from "react-icons/fa";
+import { SocialIcon } from "react-social-icons";
 
 export default function Footer() {
   return (
-    <div className="phone:container grid grid-cols-1 text-center px-2 py-2 mx-20 rounded-b-lg border-gray-400 bg-sky-500">
+    <div className="phone:container grid grid-cols-1 text-center px-2 py-2 mx-20 rounded-b-lg border-gray-400 ">
       <div className="flex justify-center space-x-5 py-3 border-gray-300 border-b-2 my-5  text-opacity-70  ">
         <Link
           href="https://twitter.com/kennie_larkson"
@@ -20,7 +21,8 @@ export default function Footer() {
           className=" px-3 py-2 "
         >
           <button>
-            <AiOutlineTwitter color="white" size="1.5rem" />
+            {/* <AiOutlineTwitter color="white" size="1.5rem" /> */}
+            <SocialIcon url="https://twitter.com/jaketrent" />
           </button>
         </Link>
 
@@ -30,7 +32,8 @@ export default function Footer() {
           className="   px-3 py-2 "
         >
           <button>
-            <AiOutlineLinkedin color="black" size="1.5rem" />
+            {/* <AiOutlineLinkedin color="black" size="1.5rem" /> */}
+            <SocialIcon url="https://linkedin/in.com/jaketrent" />
           </button>
         </Link>
 
@@ -40,7 +43,8 @@ export default function Footer() {
           className="   px-3 py-2 "
         >
           <button>
-            <AiOutlineGithub color="black" size="1.5rem" />
+            {/* <AiOutlineGithub color="black" size="1.5rem" /> */}
+            <SocialIcon url="https://github.com/jaketrent" />
           </button>
         </Link>
       </div>
@@ -68,3 +72,5 @@ export default function Footer() {
     </div>
   );
 }
+
+//bg-sky-500
